@@ -11,7 +11,8 @@ export default (nextConfig: any = {}): any => ({
         {
           loader: '@svgr/webpack',
           options: {
-            babel: false
+            babel: false,
+            ...(nextConfig.svgrOptions ?? {})
           }
         }
       ]
